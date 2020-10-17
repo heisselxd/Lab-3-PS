@@ -1,0 +1,65 @@
+#HEISSEL GUSTAVO MENDEZ RAMIREZ 1674452
+#lab 3
+pip install times
+function suma
+{
+   $c = ($a + $b)
+   "El resultado es: "
+   $c
+}
+function resta
+{
+   $c = ($a - $b)  
+   "El resultado es: "
+   $c
+}
+function multiplicacion
+{
+   $c= ($a*$b)
+   "El resultado es: "
+   $c
+}
+
+function Show-Menu
+{
+     param ([string]$Title = 'Menu' )
+     #cls
+     Write-Host "================ $Title ================"
+    
+     Write-Host "1: Presione '1' para realizar una suma."
+     Write-Host "2: Presione '2' para realizar una resta "
+     Write-Host "3: Presione '3' para realizar una multiplicacion."
+     Write-Host "Q: Presione 'Q' para salir."
+     }
+do
+{
+    "Ingrese 2 numeros que desee trabajar"
+    $a = read-Host " --Ingresa el primer numero"
+    $b = read-Host " --Ingresa el segundo numero"
+    Show-Menu
+    $input = Read-Host "Seleccione una opcion"
+    switch($input)
+    {
+        '1'{
+            cls
+             suma
+             
+
+        }
+        '2'{
+            cls
+            resta
+         
+        }
+        '3'{
+            cls
+            multiplicacion
+            
+        }
+        'q'{
+            return
+        }
+    }
+    
+}Until ($strQuit -eq "q")
+clear
